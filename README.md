@@ -2,16 +2,20 @@
 This is the submission repository for Adaptive Computing Developer Contest hosted by Xilinx 
 These are the set of commands used in all three devices:
 •	Windows
+
 o	Jupyter notebook and python 3.6 was used to train models from scratch using keras framework with tensorflow backend (CUDA enabled)
 o	The model generated can be found in the model folder of this repository
 o	SSH was done to the linux machine running ubuntu to execute git related commands
+
 •	Linux(Ubuntu)
+
 o	The vitis-ai-tutorials was cloned from the following git repository to convert keras model into elf models. https://github.com/Xilinx/Vitis-AI-Tutorials.git
 o	Commands run inside the repository:
 	./docker_run.sh xilinx/vitis-ai:latest (to start the docker)
 	source ./0_setenv.sh (initializing many of the parameters for the specific model)
 	source ./2_keras2tf.sh (starting the keras to tensorflow conversion)
 	source ./4_quant.sh (quantization of the images placed inside the calib_images folder)
+
 •	A custom datagen.py script was written to convert the calib_images into proper format for the model input shape 
 	source ./6_compile.sh ( compiling the model with path to the dcf and arch json file inside the DOUCZDX8G path)
 o	The above command must have generated an elf file if executed properly.

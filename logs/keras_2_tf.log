@@ -1,0 +1,16 @@
+WARNING:tensorflow:From /opt/vitis_ai/conda/envs/vitis-ai-tensorflow/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From keras_2_tf.py:87: The name tf.keras.backend.get_session is deprecated. Please use tf.compat.v1.keras.backend.get_session instead.
+
+-------------------------------------
+keras_2_tf command line arguments:
+ --keras_json: 
+ --keras_hdf5: ./build/keras_model/k_model.h5
+ --tf_ckpt   : ./build/tf_chkpt/tf_float.ckpt
+-------------------------------------
+Keras model information:
+ Input names : [<tf.Tensor 'conv2d_194_input:0' shape=(?, 200, 200, 3) dtype=float32>]
+ Output names: [<tf.Tensor 'dense_66/Softmax:0' shape=(?, 10) dtype=float32>]
+-------------------------------------
+ Checkpoint created : ./build/tf_chkpt/tf_float.ckpt
